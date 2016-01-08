@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Credentials
+	     environment="Production"
+  lang="en-CA"
+  release="8.1-Lite"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.starstandards.org/STAR/STAR/Rev4.2.4/BODs/Standalone/ShowVehicleRemarketing.xsd">
+  <!-- Below tag will use to Set Server Configuration as well as email -->
+	<config>
+		<base_url>http://serverurl/</base_url>
+		<encryption_key>******</encryption_key>
+		<protocol>smtp</protocol>
+		<smtp_host>smtp.***.com</smtp_host>
+		<smtp_port>587</smtp_port>
+		<smtp_user>XXX@XXX.com</smtp_user>
+		<smtp_pass>********</smtp_pass>
+		<mailtype>html</mailtype>
+		<email_name>IWMF</email_name>
+	</config>
+	<!-- Below tag will use to Set Database Configuration -->
+	<db>
+		<default>
+			<hostname>DBHOST</hostname>
+			<username>username</username>
+			<password>****</password>
+			<database>XXXXX</database>
+			<dbdriver>mysqli</dbdriver>
+			<dbprefix></dbprefix>
+			<pconnect>TRUE</pconnect>
+			<db_debug>TRUE</db_debug>
+			<cache_on>FALSE</cache_on>
+			<cachedir></cachedir>
+			<char_set>utf8</char_set>
+			<dbcollat>utf8_general_ci</dbcollat>
+			<swap_pre></swap_pre>
+			<autoinit>TRUE</autoinit>
+			<stricton>FALSE</stricton>
+		</default>
+	</db>
+	<!-- Below tag will use to Set constants located in constants.php file -->
+	<constants>
+	
+		<TOKENEXPIREMIN>960</TOKENEXPIREMIN>
+		<SUB_DIR>assets/</SUB_DIR>
+	    <EMAIL_FROM>xxx@xxx.com</EMAIL_FROM>
+	    <EMAIL_NAME>Reporta</EMAIL_NAME>
+	    <SMS_FROM>(000) 000-0000</SMS_FROM>
+	    <ANDROID_API_ACCESS_KEY>*****************************</ANDROID_API_ACCESS_KEY>
+	    <KEY>**********</KEY>
+	    <FACEBOOK_APP_ID>00000000000000</FACEBOOK_APP_ID>
+	    <FACEBOOK_APP_SECRET>***************</FACEBOOK_APP_SECRET>
+	    <TWITTER_CONSUMER_KEY>***************</TWITTER_CONSUMER_KEY>
+	    <TWITTER_CONSUMER_SECRET>******************************</TWITTER_CONSUMER_SECRET>
+	    <PASSPHRASE>****</PASSPHRASE>
+
+		<!-- Do not change below tag values -->
+	    <FILE_READ_MODE>0644</FILE_READ_MODE>
+	    <FILE_WRITE_MODE>0666</FILE_WRITE_MODE>
+	    <DIR_READ_MODE>0755</DIR_READ_MODE>
+	    <DIR_WRITE_MODE>0777</DIR_WRITE_MODE>
+	    
+	    
+	    <FOPEN_READ>rb</FOPEN_READ>
+	    <FOPEN_READ_WRITE>r+b</FOPEN_READ_WRITE>
+	    <FOPEN_WRITE_CREATE_DESTRUCTIVE>wb</FOPEN_WRITE_CREATE_DESTRUCTIVE>
+	    <FOPEN_READ_WRITE_CREATE_DESTRUCTIVE>w+b</FOPEN_READ_WRITE_CREATE_DESTRUCTIVE>
+	    <FOPEN_WRITE_CREATE>ab</FOPEN_WRITE_CREATE>
+	    <FOPEN_READ_WRITE_CREATE>a+b</FOPEN_READ_WRITE_CREATE>
+	    <FOPEN_WRITE_CREATE_STRICT>xb</FOPEN_WRITE_CREATE_STRICT>
+	    <FOPEN_READ_WRITE_CREATE_STRICT>x+b</FOPEN_READ_WRITE_CREATE_STRICT>
+	    
+	</constants>
+	<!-- Below tag will use to Set twilio in twilio.php file to send sms -->
+	<twilio>
+	    
+	    <mode>sandbox</mode>
+	    <account_sid>********************</account_sid>
+	    <auth_token>********************</auth_token>
+	    <api_version>2010-04-01</api_version>
+	    <number>+0000000000</number>
+	    
+	</twilio>
+	<!-- Below tag will use to Set bcrypt in bcrypt.php -->
+	<bcrypt>
+	    <iteration_count>8</iteration_count>
+	    <portable_hashes>FALSE</portable_hashes>
+	</bcrypt>
+</Credentials>
