@@ -4,14 +4,14 @@ The server side Source code of IWMF's Reporta App which is written in PHP.
 ## Description:
 
 * Developed 'Reporta', a mobile application designed to help protect journalists working in dangerous and high-risk settings. This mobile application aims to ensure reporters' safety.
-* The app will allow journalists to create an account and alert their connections and followers when they are in danger or need of immediate assistance. 
+* The app will allow journalists to create an account and alert their connections and followers when they are in danger or need of immediate-assistance. 
 
 
 ## Primary Features:
 
 * An Alert tool that geolocates users and signals the need for immediate assistance.
 * An Check In tool that geolocates users and signals the need for assistance when missed
-* An SOS button that sends an immediate alert to users private contacts to enable a protocol of action to assist the user
+* An SOS button that sends an immediate alert to user's private contacts to enable a protocol of action to assist the user
 
 
 ## Contact Us
@@ -49,56 +49,55 @@ All code has been released under GPL 3 and users are free to review, comment and
 
 ### Tags  in settings.xml
 
-* <config>....</config> :
-
+ * ```<config>....</config>``` 
   Set Server Configuration
 
- * <base_url>..</base_url> :  server url
+ * ```<base_url>..</base_url>``` :  server url
 
   Below tags will use to send email
 
-   * <protocol>smtp</protocol>
-   * <smtp_host>smtp.XXX.com</smtp_host> : smtp host of email service provider
-   * <smtp_port>587</smtp_port>  : port number
-   * <smtp_user>XXX@XXX.com</smtp_user> :email id which will use to send eamil
-   * <smtp_pass>XXXX</smtp_pass> : email password
-   * <mailtype>html</mailtype> : type of email
-   * <email_name>IWMF</email_name>  : name on each mail
+   * ```<protocol>smtp</protocol>```
+   * ```<smtp_host>smtp.XXX.com</smtp_host>``` : smtp host of email service provider
+   * ```<smtp_port>587</smtp_port>```  : port number
+   * ```<smtp_user>XXX@XXX.com</smtp_user>``` :email id which will use to send eamil
+   * ```<smtp_pass>XXXX</smtp_pass>``` : email password
+   * ```<mailtype>html</mailtype>``` : type of email
+   * ```<email_name>IWMF</email_name>```  : name on each mail
 
-* <db>  <default> .... </default></db>
+### ```<db>  <default> .... </default></db>```
 
     Set Database Configuration
 
- * <hostname>DBHOST</hostname>  : database host name
- * <username>username</username> : database username
- * <password>****</password>  : database password
- * <database>XXXXX</database>  : database name (iwmf)
- * <dbdriver>mysqli</dbdriver> : database driver (mysql/mysqli)
+ * ```<hostname>DBHOST</hostname>```  : database host name
+ * ```<username>username</username>``` : database username
+ * ```<password>****</password>```  : database password
+ * ```<database>XXXXX</database>```  : database name (iwmf)
+ * ```<dbdriver>mysqli</dbdriver>``` : database driver (mysql/mysqli)
 
-* <constants> .. </constants>
+### ```<constants> .. </constants>```
 
    configuration of constants use in project
 
- * <TOKENEXPIREMIN>960</TOKENEXPIREMIN>  : token validation time in minute
- * <SUB_DIR>assets/</SUB_DIR>  : use to upload file
- * <EMAIL_FROM>admin@reporta.org</EMAIL_FROM> : from email address
- * <EMAIL_NAME>Reporta</EMAIL_NAME>  : From email name
- * <SMS_FROM>(201) 885-6452</SMS_FROM> : from phone number to send SMS
- * <ANDROID_API_ACCESS_KEY>***</ANDROID_API_ACCESS_KEY> :android api key to send notification
- * <KEY>***</KEY> : key use in encoding and decoding
- * <FACEBOOK_APP_ID>***</FACEBOOK_APP_ID> : facebook app id use to post on facebook
- * <FACEBOOK_APP_SECRET>**</FACEBOOK_APP_SECRET> : facebook app SECRET use to post on facebook
- * <TWITTER_CONSUMER_KEY>**</TWITTER_CONSUMER_KEY>  : Twitter key
- * <TWITTER_CONSUMER_SECRET>*** </TWITTER_CONSUMER_SECRET> : Twitter secret key
+ * ```<TOKENEXPIREMIN>960</TOKENEXPIREMIN>```  : token validation time in minute
+ * ```<SUB_DIR>assets/</SUB_DIR>```  : use to upload file
+ * ```<EMAIL_FROM>admin@reporta.org</EMAIL_FROM>``` : from email address
+ * ```<EMAIL_NAME>Reporta</EMAIL_NAME>```  : From email name
+ * ```<SMS_FROM>(201) 885-6452</SMS_FROM>``` : from phone number to send SMS
+ * ```<ANDROID_API_ACCESS_KEY>***</ANDROID_API_ACCESS_KEY>``` :android api key to send notification
+ * ```<KEY>***</KEY>``` : key use in encoding and decoding
+ * ```<FACEBOOK_APP_ID>***</FACEBOOK_APP_ID>``` : facebook app id use to post on facebook
+ * ```<FACEBOOK_APP_SECRET>**</FACEBOOK_APP_SECRET>``` : facebook app SECRET use to post on facebook
+ * ```<TWITTER_CONSUMER_KEY>**</TWITTER_CONSUMER_KEY>```  : Twitter key
+ * ```<TWITTER_CONSUMER_SECRET>*** </TWITTER_CONSUMER_SECRET>``` : Twitter secret key
 
 
-* <twilio>....</twilio>
+###  ```<twilio>....</twilio>```
 
    Twilio configuration to send sms
 
- * <account_sid>***</account_sid> : account sid given by twilio
- * <auth_token>***</auth_token> : account token given by twilio
- * <number>+12026013865</number>  : twilio phone number
+ * ```<account_sid>***</account_sid>``` : account sid given by twilio
+ * ```<auth_token>***</auth_token>``` : account token given by twilio
+ * ```<number>+12026013865</number>```  : twilio phone number
 
 
 ## Code Skeleton:
@@ -123,7 +122,7 @@ Total six API in the api directory.
 * deletedatacron
         As we do not save any important data on server we delete the data saved (i.e. alerts, checkin, sos), this deletes the data from server.
 * media
-        When user does not respond to 'checkinconfirm' alert then this service will fire an email with attached media  video/image/audio which user has uploaded in the checkin time.
+        When user does not respond to 'checkinconfirm' alert then this service will fire an email with attached media video/image/audio which user has uploaded in the checkin time.
 * user
         This will manage user Create, Update, Signin, Signout, Forgotpassword, Updatepassword operations.
 
